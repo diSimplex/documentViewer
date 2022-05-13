@@ -1,0 +1,28 @@
+{
+  "name": "documentviewer",
+  "version": "1.0.0",
+  "description": "A PDF document viewer with the ability to synchronise a collection of static comments with individual pages/sections of the viewed PDF document.",
+  "source": "web/viewer.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh:git@github.com:diSimplex/documentViewer.git"
+  },
+  "author": "Stephen Gaito",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/diSimplex/documentViewer/issues"
+  },
+  "homepage": "https://github.com/diSimplex/documentViewer#readme",
+  "devDependencies": {
+    "buffer": "^6.0.3",
+    "parcel": "^2.5.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "pdfjs-dist": "^2.13.216"
+  }
+}

@@ -1,0 +1,39 @@
+#!/bin/bash
+
+# This bash script get an upstream copy of the Mozilla PDF.js package
+
+pdfjsVersion=2.13.216
+
+rm -rf pdfjs.gz.tar
+
+wget --output-document=pdfjs.gz.tar \
+  https://github.com/mozilla/pdf.js/archive/refs/tags/v${pdfjsVersion}.tar.gz
+
+rm -rf pdfjs
+mkdir -p pdfjs
+
+pushd pdfjs
+tar xvf ../pdfjs.gz.tar --strip-component=1
+
+pushd web
+sed 's|url(images|url(pdfjs-dist:web/images|' viewer.css -i
+sed 's|pdfjs-web/|./|' viewer.js -i
+for jsFile in *.js ; do
+  echo fixing $jsFile
+  sed 's|pdfjs-libs|pdfjs-dist|g' $jsFile -i
+  sed 's|pdfjs-lib|pdfjs-dist|g' $jsFile -i
+  sed 's|\"pdfjs/core/worker.js|\"pdfjs-dist/build/pdf.worker.js|g' $jsFile -i
+done
+ag pdfjs-lib
+popd
+
+rm -rf ../web
+mv web ..
+
+popd
+
+cp localChanges/* web
+
+rm -rf pdfjs
+rm -rf pdfjs.gz.tar
+

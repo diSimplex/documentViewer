@@ -26,3 +26,22 @@ below the PDF canvas, which can be used to add new comments.
 
 - [W3Schools: How TO -
   Overlay](https://www.w3schools.com/howto/howto_css_overlay.asp)
+
+## Installation
+
+Our documentViewer is built upon the [Mozilla
+PDF.js](https://mozilla.github.io/pdf.js/) `web/viewer.html`. However we
+make a number of important changes to this pre-existing code. To do this
+*cleanly* we *should* install PDF.js as a standard `npm` module.
+Unfortunately for a number of reasons this does not work in our
+environment. So, instead, we manually install the PDF.js source code into
+the local `node_modules` directly using the `./scripts/installPDFjs` bash
+script.
+
+To fully install documentViewer from source, in the bottom of the
+documentViewer git repository, type:
+
+```
+npm install
+./scripts/installPDFjs
+```
