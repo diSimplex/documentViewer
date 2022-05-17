@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# This bash script sets up the pdf.js git submodule
+
+git submodule update --init --recursive
