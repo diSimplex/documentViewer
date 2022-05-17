@@ -1,8 +1,20 @@
 tmp
-web
 package-lock.json
 .parcel-cache
+web/locale
 
+# Copied from PDF.js's .gitignore
+*~
+local.mk
+build/
+tags
+.DS_Store
+Makefile
+node_modules/
+examples/node/svgdump/
+examples/node/pdf2png/*.png
+
+# Taken from Andrea Sonny's "Gitignore template for JavaScript projects"
 # from: https://gist.githubusercontent.com/andreasonny83/b24e38b7772a3ea362d8e8d238d5a7bc/raw/520cca7434dd00cb0beafedef4d7e2348b8f104e/.gitignore
 #
 # See http://help.github.com/ignore-files/ for more about ignoring files.

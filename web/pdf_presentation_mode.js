@@ -1,0 +1,1 @@
+../pdfjs/web/pdf_presentation_mode.js

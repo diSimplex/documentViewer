@@ -1,0 +1,1 @@
+../pdfjs/web/pdf_thumbnail_viewer.js

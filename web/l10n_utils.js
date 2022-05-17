@@ -1,0 +1,1 @@
+../pdfjs/web/l10n_utils.js

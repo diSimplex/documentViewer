@@ -1,0 +1,1 @@
+../pdfjs/web/secondary_toolbar.js

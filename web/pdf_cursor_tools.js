@@ -1,0 +1,1 @@
+../pdfjs/web/pdf_cursor_tools.js

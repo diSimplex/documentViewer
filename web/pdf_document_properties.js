@@ -1,0 +1,1 @@
+../pdfjs/web/pdf_document_properties.js

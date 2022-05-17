@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# This bash script is used for the *initial* set up of the pdf.js git
+# submodule
+#
+# IT SHOULD NOT NEED TO BE RUN AGAIN
+
+#
+# git submodule add https://github.com/mozilla/pdf.js.git pdfjs
+
+#
+# cp pdfjs/package.json .
+# npm install --force
+
+#
+# gulp must be installed "globally"
+
+#
+# cp pdfjs/gulpfile.js .
+# ln -s pdfjs/external .
+# ln -s pdfjs/l10n .
+# ln -s pdfjs/src .
+# ln -s pdfjs/test .
+# ln -s pdfjs/systemjs.config.js .
+
+#
+# cd web
+# cp ../pdfjs/web/app_options.js .
+# cp ../pdfjs/web/viewer.html .
+
+# ln -s ../pdfjs/web/*.html .
+# ln -s ../pdfjs/web/*.css .
+# ln -s ../pdfjs/web/*.js .
+# ln -s ../pdfjs/web/*.pdf .
+# ln -s ../pdfjs/web/images .

@@ -1,0 +1,1 @@
+../pdfjs/web/genericl10n.js

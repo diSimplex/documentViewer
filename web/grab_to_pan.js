@@ -1,0 +1,1 @@
+../pdfjs/web/grab_to_pan.js

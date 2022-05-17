@@ -1,0 +1,1 @@
+../pdfjs/web/pdf_attachment_viewer.js

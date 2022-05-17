@@ -10,14 +10,14 @@ To initially setup the PDF.js git submodule we need to (only once) type:
 ```
   git submodule add https://github.com/mozilla/pdf.js.git pdfjs
 ```
-and then committe the whole documentVierwer project.
+and then commit the whole documentVierwer project.
 
 
 Any time a new copy of the documentViewer project is cloned locally, the
 user needs to run the:
 
 ```
-  ./scripts/pdfjsSetup
+  ./scripts/pdfjsCloneSetup
 ```
 script *once*.
 
@@ -27,9 +27,9 @@ documentViewer's use of the pdfjs project to a new tag, they need to run
 the:
 
 ```
-  ./scripts/pdfjsUpdate
+  ./scripts/pdfjsVersionUpdate
 ```
 script. This script will list the 10 most recent tags and then ask the
-user to specifiy a new tag at the prompt. Once a the pdfjs project has
+user to specify a new tag at the prompt. Once a the pdfjs project has
 been updated to a new tag, the documentViewer project as a whole needs to
 be committed.

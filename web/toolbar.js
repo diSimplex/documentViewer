@@ -1,0 +1,1 @@
+../pdfjs/web/toolbar.js

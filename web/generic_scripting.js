@@ -1,0 +1,1 @@
+../pdfjs/web/generic_scripting.js

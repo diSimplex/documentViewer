@@ -1,0 +1,1 @@
+../pdfjs/web/pdf_scripting_manager.js

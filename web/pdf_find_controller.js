@@ -1,0 +1,1 @@
+../pdfjs/web/pdf_find_controller.js

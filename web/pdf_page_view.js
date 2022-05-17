@@ -1,0 +1,1 @@
+../pdfjs/web/pdf_page_view.js

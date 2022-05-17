@@ -1,0 +1,1 @@
+../pdfjs/web/view_history.js
