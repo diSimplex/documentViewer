@@ -4,16 +4,20 @@
 
 pdfjsVersion=2.13.216
 
-rm -rf pdfjs.gz.tar
+mkdir -p tmp
 
-wget --output-document=pdfjs.gz.tar \
-  https://github.com/mozilla/pdf.js/archive/refs/tags/v${pdfjsVersion}.tar.gz
+if [ ! -f tmp/pdfjs.gz.tar ]; then
+  pushd tmp
+  wget --output-document=pdfjs.gz.tar \
+    https://github.com/mozilla/pdf.js/archive/refs/tags/v${pdfjsVersion}.tar.gz
+  popd
+fi
 
 rm -rf pdfjs
 mkdir -p pdfjs
 
 pushd pdfjs
-tar xvf ../pdfjs.gz.tar --strip-component=1
+tar xvf ../tmp/pdfjs.gz.tar --strip-component=1
 
 pushd web
 sed 's|url(images|url(pdfjs-dist:web/images|' viewer.css -i
@@ -30,10 +34,14 @@ popd
 rm -rf ../web
 mv web ..
 
+rm -rf ../external
+mv external ..
+
+rm -rf ../extensions
+mv extensions ..
+
 popd
 
 cp localChanges/* web
 
 rm -rf pdfjs
-rm -rf pdfjs.gz.tar
-
