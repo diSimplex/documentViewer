@@ -8,10 +8,15 @@ git fetch
 
 echo ""
 
+git status -b | grep -v nothing
+
+echo ""
+
 #git log --oneline origin/main -10
 
-git tag -n10 --color --sort version:refname                          \
-  --format "%(refname:short)  %(committerdate)  %(contents:subject)"
+git tag --color --sort version:refname          \
+  --format "%(refname:short)	%(committerdate)" \
+| tail
 
 echo ""
 
