@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# This bash script checks the viewer.html, viewer.js, and app_options.js
+# files against thier corresponding PDF.js originals to see if any updated
+# versions will break our changes.
+
+diff -Naur web/viewer.html    pdfjs/web/viewer.html    > ./scripts/diffs/viewer.html.diffs
+
+diff -Naur web/viewer.js      pdfjs/web/viewer.js      > ./scripts/diffs/viewer.js.diffs
+
+diff -Naur web/app_options.js pdfjs/web/app_options.js > ./scripts/diffs/app_options.js.diffs
+
+less                                   \
+  ./scripts/diffs/viewer.html.diffs    \
+  ./scripts/diffs/viewer.js.diffs      \
+  ./scripts/diffs/app_options.js.diffs
