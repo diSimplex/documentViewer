@@ -44,6 +44,16 @@
 8. take control of the app_options.js to ensure any diSimplex based
    options are honoured.
 
+### NOTES
+
+We could monkey-patch the existing PDFViewerApplication class by listening
+for a 'webviewerloaded' event when using a generic build. See the bottom
+of `web/viewer.js` and [MDN
+EventTarget.dispatchEvent()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/dispatchEvent)
+
+We could develop as above, and then pull the corrected code back into a
+monkey-patch.
+
 ## Checking tools
 
 We require tools (bash/diff scripts) which can be run each time the PDF.js
